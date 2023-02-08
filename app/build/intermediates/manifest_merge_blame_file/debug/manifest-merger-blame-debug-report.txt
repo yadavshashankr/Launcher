@@ -1,0 +1,137 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.launcher"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml
+10
+11    <permission
+11-->[androidx.core:core:1.9.0] /Users/apple/.gradle/caches/transforms-3/6572e896cf691f4b13ad10c561cb3105/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+12        android:name="com.example.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.9.0] /Users/apple/.gradle/caches/transforms-3/6572e896cf691f4b13ad10c561cb3105/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.9.0] /Users/apple/.gradle/caches/transforms-3/6572e896cf691f4b13ad10c561cb3105/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.example.launcher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.9.0] /Users/apple/.gradle/caches/transforms-3/6572e896cf691f4b13ad10c561cb3105/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.9.0] /Users/apple/.gradle/caches/transforms-3/6572e896cf691f4b13ad10c561cb3105/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:6:5-48:19
+18        android:allowBackup="true"
+18-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:7:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.9.0] /Users/apple/.gradle/caches/transforms-3/6572e896cf691f4b13ad10c561cb3105/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+20        android:dataExtractionRules="@xml/data_extraction_rules"
+20-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:8:9-65
+21        android:debuggable="true"
+22        android:extractNativeLibs="false"
+23        android:fullBackupContent="@xml/backup_rules"
+23-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:9:9-54
+24        android:icon="@mipmap/ic_launcher"
+24-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:10:9-43
+25        android:label="@string/app_name"
+25-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:11:9-41
+26        android:roundIcon="@drawable/ic_launcher"
+26-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:12:9-50
+27        android:supportsRtl="true"
+27-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:13:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.Launcher" >
+29-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:14:9-46
+30        <activity
+30-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:16:9-28:20
+31            android:name="com.example.launcher.ui.TempActivity"
+31-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:17:13-44
+32            android:enabled="false"
+32-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:19:13-36
+33            android:excludeFromRecents="true"
+33-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:20:13-46
+34            android:exported="true"
+34-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:18:13-36
+35            android:launchMode="singleTask" >
+35-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:21:13-44
+36            <intent-filter>
+36-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:22:13-27:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:24:13-65
+37-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:24:21-62
+38
+39                <category android:name="android.intent.category.HOME" />
+39-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:25:13-69
+39-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:25:23-66
+40                <category android:name="android.intent.category.DEFAULT" />
+40-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:26:13-72
+40-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:26:23-69
+41            </intent-filter>
+42        </activity>
+43        <activity
+43-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:29:9-31:40
+44            android:name="com.example.launcher.ui.BaseActivity"
+44-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:30:13-44
+45            android:exported="false" />
+45-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:31:13-37
+46        <activity
+46-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:32:9-47:20
+47            android:name="com.example.launcher.ui.MainActivity"
+47-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:33:13-44
+48            android:clearTaskOnLaunch="true"
+48-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:34:13-45
+49            android:exported="true"
+49-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:35:13-36
+50            android:launchMode="singleTask"
+50-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:36:13-44
+51            android:stateNotNeeded="true"
+51-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:37:13-42
+52            android:theme="@style/Theme.Design.Light" >
+52-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:38:13-54
+53            <intent-filter>
+53-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:39:13-42:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:24:13-65
+54-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:24:21-62
+55
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:41:17-77
+56-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:41:27-74
+57            </intent-filter>
+58            <intent-filter>
+58-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:43:13-46:29
+59                <category android:name="android.intent.category.DEFAULT" />
+59-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:26:13-72
+59-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:26:23-69
+60                <category android:name="android.intent.category.BROWSABLE" />
+60-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:45:17-78
+60-->/Users/apple/Shashank/Soullabs_Assignment/Launcher/app/src/main/AndroidManifest.xml:45:27-75
+61            </intent-filter>
+62        </activity>
+63
+64        <provider
+64-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/transforms-3/9f99c19470d8bf18ee15270d078c3173/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+65            android:name="androidx.startup.InitializationProvider"
+65-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/transforms-3/9f99c19470d8bf18ee15270d078c3173/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+66            android:authorities="com.example.launcher.androidx-startup"
+66-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/transforms-3/9f99c19470d8bf18ee15270d078c3173/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+67            android:exported="false" >
+67-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/transforms-3/9f99c19470d8bf18ee15270d078c3173/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+68            <meta-data
+68-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/transforms-3/9f99c19470d8bf18ee15270d078c3173/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+69                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+69-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/transforms-3/9f99c19470d8bf18ee15270d078c3173/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+70                android:value="androidx.startup" />
+70-->[androidx.emoji2:emoji2:1.2.0] /Users/apple/.gradle/caches/transforms-3/9f99c19470d8bf18ee15270d078c3173/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+71            <meta-data
+71-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/apple/.gradle/caches/transforms-3/a68586d9ac6fc4872d4884a947d1c1d5/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+72                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/apple/.gradle/caches/transforms-3/a68586d9ac6fc4872d4884a947d1c1d5/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+73                android:value="androidx.startup" />
+73-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/apple/.gradle/caches/transforms-3/a68586d9ac6fc4872d4884a947d1c1d5/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+74        </provider>
+75    </application>
+76
+77</manifest>
