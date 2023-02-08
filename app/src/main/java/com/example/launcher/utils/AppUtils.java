@@ -50,18 +50,16 @@ public class AppUtils {
         ComponentName componentName = new ComponentName(context, TempActivity.class);
         packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
 
-        Intent selector = new Intent(Intent.ACTION_MAIN);
-        selector.addCategory(Intent.CATEGORY_HOME);
+        Intent selector = getPackageIntent(context);
         selector.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(selector);
 
-        packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED_UNTIL_USED, PackageManager.DONT_KILL_APP);
+        packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED_UNTIL_USED, PackageManager.DONT_KILL_APP); // using DONT_KILL_APP with non system access devices, there it proves unpredictable. Could also cause apps to crash.
     }
 
     public static boolean isMyAppLauncherDefault(Context context) { // To check the default Launcher app.
         PackageManager localPackageManager = context.getPackageManager();
-        Intent intent = new Intent("android.intent.action.MAIN");
-        intent.addCategory("android.intent.category.HOME");
+        Intent intent = getPackageIntent(context);
         String str = localPackageManager.resolveActivity(intent,
                 PackageManager.MATCH_DEFAULT_ONLY).activityInfo.packageName;
         return str.equals(context.getPackageName());
@@ -75,5 +73,11 @@ public class AppUtils {
     public static int pxToDp(Context context, int px) {
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         return Math.round(px / (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+    }
+
+    public static Intent getPackageIntent(Context context){
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        return intent;
     }
 }
