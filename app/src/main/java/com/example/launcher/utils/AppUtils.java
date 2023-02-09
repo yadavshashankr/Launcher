@@ -22,6 +22,7 @@ import java.util.List;
 public class AppUtils {
 
     public static boolean traversed = false;
+
     public static List<AppInfo> getAllApps(Context context){
 
         PackageManager pManager = context.getPackageManager();
@@ -48,7 +49,7 @@ public class AppUtils {
         ComponentName componentName = new ComponentName(context, TempActivity.class);
         packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
 
-        Intent selector = getPackageIntent(context);
+        Intent selector = getPackageIntent(Intent.ACTION_MAIN, Intent.CATEGORY_HOME);
         selector.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(selector);
 
@@ -57,7 +58,7 @@ public class AppUtils {
 
     public static boolean isMyAppLauncherDefault(Context context) { // To check the default Launcher app.
         PackageManager localPackageManager = context.getPackageManager();
-        Intent intent = getPackageIntent(context);
+        Intent intent = getPackageIntent(Intent.ACTION_MAIN, Intent.CATEGORY_HOME);
         String str = localPackageManager.resolveActivity(intent,
                 PackageManager.MATCH_DEFAULT_ONLY).activityInfo.packageName;
         return str.equals(context.getPackageName());
@@ -73,9 +74,9 @@ public class AppUtils {
         return Math.round(px / (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
     }
 
-    public static Intent getPackageIntent(Context context){
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
+    public static Intent getPackageIntent(String action, String category){
+        Intent intent = new Intent(action);
+        intent.addCategory(category);
         return intent;
     }
 }
