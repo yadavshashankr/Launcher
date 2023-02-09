@@ -62,7 +62,6 @@ public class AppsDrawerAdapter extends RecyclerView.Adapter<AppsDrawerAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ConstraintLayout constraintLayout;
-        private ConstraintLayout cl_inter;
         public TextView textView;
         public ImageView imageView;
 
