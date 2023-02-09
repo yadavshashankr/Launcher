@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.util.DisplayMetrics;
-import com.example.launcher.constants.AppInfo;
+import com.example.launcher.models.AppInfo;
 import com.example.launcher.ui.TempActivity;
 import java.util.ArrayList;
 import java.util.List;

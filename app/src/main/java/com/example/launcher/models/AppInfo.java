@@ -1,4 +1,4 @@
-package com.example.launcher.constants;
+package com.example.launcher.models;
 
 import android.graphics.drawable.Drawable;
 

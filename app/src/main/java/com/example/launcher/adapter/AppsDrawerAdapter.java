@@ -14,7 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.launcher.R;
-import com.example.launcher.constants.AppInfo;
+import com.example.launcher.models.AppInfo;
 import java.util.List;
 
 /**
