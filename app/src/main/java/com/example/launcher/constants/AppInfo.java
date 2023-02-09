@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 /**
  * POJO class for AppInfo.
  */
-
 public class AppInfo  {
     CharSequence label;
     CharSequence packageName;

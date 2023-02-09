@@ -4,7 +4,6 @@ import static com.example.launcher.utils.AppUtils.getAllApps;
 import static com.example.launcher.utils.AppUtils.isMyAppLauncherDefault;
 import static com.example.launcher.utils.AppUtils.resetPreferredLauncherAndOpenChooser;
 import static com.example.launcher.utils.AppUtils.traversed;
-
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;

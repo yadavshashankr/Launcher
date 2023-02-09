@@ -25,8 +25,8 @@ import java.util.List;
 
 public class AppsDrawerAdapter extends RecyclerView.Adapter<AppsDrawerAdapter.ViewHolder> {
 
-    private Context context;
-    private List<AppInfo> apps;
+    private Context context = null;
+    private List<AppInfo> apps = null;
 
     public AppsDrawerAdapter(Context context, List<AppInfo> apps) {
         this.context = context;
@@ -51,6 +51,7 @@ public class AppsDrawerAdapter extends RecyclerView.Adapter<AppsDrawerAdapter.Vi
         holder.textView.setText(appInfo.getLabel());
         holder.imageView.setImageDrawable(appInfo.getIcon());
 
+        // launching the respective Launcher apps.
         holder.constraintLayout.setOnClickListener(view -> context.startActivity(context.getPackageManager().getLaunchIntentForPackage(appInfo.getPackageName().toString())));
     }
 
@@ -74,7 +75,7 @@ public class AppsDrawerAdapter extends RecyclerView.Adapter<AppsDrawerAdapter.Vi
             constraintLayout.addView(textView);
         }
 
-        private ConstraintLayout setListItemParameters(View itemView){
+        private ConstraintLayout setListItemParameters(View itemView){ // Setting parameters for Ripple effect(Feedback)
             constraintLayout = itemView.findViewById(R.id.container);
             TypedValue rippleFeedback = new TypedValue();
             context.getTheme().resolveAttribute(android.R.attr.selectableItemBackground, rippleFeedback, true);
@@ -82,9 +83,10 @@ public class AppsDrawerAdapter extends RecyclerView.Adapter<AppsDrawerAdapter.Vi
             return constraintLayout;
         }
 
-        private TextView setTextParameters(){
+        private TextView setTextParameters(){ //Setting App Name parameters.
             textView = new TextView(context);
-            ConstraintLayout.LayoutParams tvParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
+            ConstraintLayout.LayoutParams tvParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT,
+            ConstraintLayout.LayoutParams.WRAP_CONTENT);
             textView.setId(R.id.tv_label);
             tvParams.topToTop = R.id.iv_icon;
             tvParams.bottomToBottom = R.id.iv_icon;
@@ -96,11 +98,11 @@ public class AppsDrawerAdapter extends RecyclerView.Adapter<AppsDrawerAdapter.Vi
             return textView;
         }
 
-        private ImageView setIconParameters(){
+        private ImageView setIconParameters(){ //Setting icon parameters.
             imageView = new ImageView(context);
             imageView.setId(R.id.iv_icon);
             ConstraintLayout.LayoutParams ivParams = new ConstraintLayout.LayoutParams(dpToPx(context, (int) context.getResources().getDimension(R.dimen.spacing_full)),
-                    dpToPx(context, (int) context.getResources().getDimension(R.dimen.spacing_full)));
+            dpToPx(context, (int) context.getResources().getDimension(R.dimen.spacing_full)));
             ivParams.topToTop = ConstraintLayout.LayoutParams.PARENT_ID;
             ivParams.startToStart = ConstraintLayout.LayoutParams.PARENT_ID;
             ivParams.setMargins((int) context.getResources().getDimension(R.dimen.spacing_quarter_filler), (int) context.getResources().getDimension(R.dimen.spacing_quarter_filler), 0, (int) context.getResources().getDimension(R.dimen.spacing_quarter_filler));
