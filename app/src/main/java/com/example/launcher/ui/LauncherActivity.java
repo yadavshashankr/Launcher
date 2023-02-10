@@ -1,8 +1,6 @@
 package com.example.launcher.ui;
 
-import static com.example.launcher.utils.AppUtils.getAllApps;
-import static com.example.launcher.utils.AppUtils.isMyAppLauncherDefault;
-import static com.example.launcher.utils.AppUtils.resetPreferredLauncherAndOpenChooser;
+
 import static com.example.launcher.utils.AppUtils.traversed;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,9 +25,9 @@ public class LauncherActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(!isMyAppLauncherDefault(getApplicationContext()) && !traversed){
+        if(!traversed){
             traversed = true;
-            resetPreferredLauncherAndOpenChooser(getApplicationContext());
+            resetPreferredLauncherAndOpenChooser();
         }
 
         setLauncherList();
@@ -50,7 +48,5 @@ public class LauncherActivity extends BaseActivity {
     private void setLauncherList(){
         adapter = new AppsDrawerAdapter(this, getAllApps(getApplicationContext()));
     }
-
-
 
 }
