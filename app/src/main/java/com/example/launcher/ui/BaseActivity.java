@@ -4,6 +4,7 @@ import static com.example.launcher.utils.AppUtils.getPackageIntent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -23,7 +24,7 @@ import java.util.List;
  * Rather than adding views to container from every activity, we just pass the built Views in java files here.
  * Activities having extending this BaseActivity class will pass their custom built views by calling launch method.
  */
-
+@SuppressLint("QueryPermissionsNeeded")
 public class BaseActivity extends AppCompatActivity {
     FrameLayout frameLayout;
 
